@@ -10,7 +10,7 @@ const MapComponent = dynamic(() => import('@/components/map/WardMap'), {
   loading: () => (
     <div className="h-96 bg-gray-200 rounded-lg flex items-center justify-center">
       <div className="text-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-red-600 mx-auto mb-4"></div>
         <p className="text-gray-600">Loading map...</p>
       </div>
     </div>
@@ -48,7 +48,7 @@ const locations: LocationData[] = [
     name: 'Ward Office',
     type: 'office',
     coordinates: [-1.1850, 36.8180],
-    description: 'Administrative office for Ruaka/Ndenderu Ward',
+    description: 'Administrative office for Ndenderu Ward',
     address: 'Ward Office Complex, Ruaka'
   },
   {
@@ -95,7 +95,7 @@ const getLocationIcon = (type: string) => {
 const getLocationColor = (type: string) => {
   switch (type) {
     case 'school':
-      return 'text-blue-600 bg-blue-100';
+      return 'text-red-600 bg-red-100';
     case 'hospital':
       return 'text-red-600 bg-red-100';
     case 'office':
@@ -123,13 +123,13 @@ export default function MapPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+      <section className="bg-gradient-to-r from-red-600 to-red-700 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Ruaka & Ndenderu Ward Map
+              Ndenderu Ward Map
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-red-50 max-w-4xl mx-auto">
               Explore our ward boundaries, key locations, and community facilities. 
               Discover the areas we serve and the infrastructure we're working to improve.
             </p>
@@ -170,7 +170,7 @@ export default function MapPage() {
                       key={location.id}
                       className={`p-4 rounded-lg border-2 cursor-pointer transition-all ${
                         selectedLocation?.id === location.id
-                          ? 'border-blue-500 bg-blue-50'
+                          ? 'border-red-500 bg-red-50'
                           : 'border-gray-200 hover:border-gray-300'
                       }`}
                       onClick={() => setSelectedLocation(location)}
@@ -202,7 +202,7 @@ export default function MapPage() {
               Ward Overview
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Key statistics and information about Ruaka and Ndenderu Ward
+              Key statistics and information about Ndenderu Ward
             </p>
           </div>
           
@@ -230,7 +230,7 @@ export default function MapPage() {
               }
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-blue-600 mb-4 flex justify-center">{stat.icon}</div>
+                <div className="text-red-600 mb-4 flex justify-center">{stat.icon}</div>
                 <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
                   {stat.number}
                 </div>
@@ -261,7 +261,7 @@ export default function MapPage() {
                 title: "Road Infrastructure",
                 description: "Improvement of major roads connecting Ruaka and Ndenderu",
                 status: "In Progress",
-                color: "bg-blue-100 text-blue-800"
+                color: "bg-red-100 text-red-800"
               },
               {
                 title: "Water Supply",
@@ -279,7 +279,7 @@ export default function MapPage() {
                 title: "Health Center Upgrade",
                 description: "Expansion of Ndenderu Health Centre facilities",
                 status: "In Progress",
-                color: "bg-blue-100 text-blue-800"
+                color: "bg-red-100 text-red-800"
               },
               {
                 title: "Market Development",
@@ -307,25 +307,25 @@ export default function MapPage() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-blue-600 text-white">
+      <section className="py-16 bg-red-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Get Involved in Your Community
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-red-50 mb-8 max-w-3xl mx-auto">
             Learn more about our development plans and how you can contribute to 
-            building a better future for Ruaka and Ndenderu Ward.
+            building a better future for Ndenderu Ward.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/plan"
-              className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition-colors inline-flex items-center justify-center"
+              className="bg-white hover:bg-red-50 text-red-600 font-bold py-4 px-8 rounded-lg text-lg transition-colors inline-flex items-center justify-center shadow-lg"
             >
               View Development Plan
             </a>
             <a
               href="/feedback"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-bold py-4 px-8 rounded-lg text-lg transition-colors inline-flex items-center justify-center"
+              className="border-2 border-white text-white hover:bg-white hover:text-red-600 font-bold py-4 px-8 rounded-lg text-lg transition-colors inline-flex items-center justify-center"
             >
               Share Your Ideas
             </a>
