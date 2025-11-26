@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, Users, MapPin, CheckCircle } from 'lucide-react';
 
 export default function Home() {
@@ -38,6 +39,38 @@ export default function Home() {
                 View Campaign Strategy
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Campaign Gallery Section 1 - After Hero */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Campaign in Action
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              See our engagement with the community across Ndenderu Ward
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              '/WhatsApp Image 2025-11-26 at 4.29.09 PM.jpeg',
+              '/WhatsApp Image 2025-11-26 at 4.29.09 PM (1).jpeg',
+              '/WhatsApp Image 2025-11-26 at 4.29.09 PM (2).jpeg',
+              '/WhatsApp Image 2025-11-26 at 4.29.09 PM (3).jpeg',
+            ].map((image, index) => (
+              <div key={index} className="relative aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                <Image
+                  src={image}
+                  alt={`Campaign activity ${index + 1}`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -110,6 +143,38 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Campaign Gallery Section 2 - After CTA */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Community Engagement
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Building connections and listening to the voices of Ndenderu Ward
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              '/WhatsApp Image 2025-11-26 at 4.29.10 PM.jpeg',
+              '/WhatsApp Image 2025-11-26 at 4.29.18 PM.jpeg',
+              '/WhatsApp Image 2025-11-26 at 4.29.18 PM (1).jpeg',
+              '/WhatsApp Image 2025-11-26 at 4.29.19 PM.jpeg',
+            ].map((image, index) => (
+              <div key={index} className="relative aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                <Image
+                  src={image}
+                  alt={`Community engagement ${index + 1}`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Statistics Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -136,6 +201,38 @@ export default function Home() {
                 <div className="text-gray-600 text-lg">
                   {stat.label}
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Campaign Gallery Section 3 - After Statistics */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Our Journey Together
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Moments from our campaign trail across Ndenderu Ward
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              '/WhatsApp Image 2025-11-26 at 4.29.19 PM (1).jpeg',
+              '/WhatsApp Image 2025-11-26 at 4.29.20 PM.jpeg',
+              '/WhatsApp Image 2025-11-26 at 4.29.20 PM (1).jpeg',
+              '/WhatsApp Image 2025-11-26 at 4.29.21 PM.jpeg',
+            ].map((image, index) => (
+              <div key={index} className="relative aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+                <Image
+                  src={image}
+                  alt={`Campaign journey ${index + 1}`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                />
               </div>
             ))}
           </div>
