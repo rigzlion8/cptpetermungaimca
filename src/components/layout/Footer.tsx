@@ -80,7 +80,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2025-2027 Peter Mungai MCA Campaign. All rights reserved. | 
+            © 2025-2027 Hon. Peter Mungai MCA Campaign. All rights reserved. | 
             <Link href="/privacy" className="ml-1 hover:text-white transition-colors">
               Privacy Policy
             </Link>
@@ -88,6 +88,17 @@ export default function Footer() {
             <Link href="/terms" className="hover:text-white transition-colors">
               Terms of Service
             </Link>
+          </p>
+          <p className="text-gray-500 text-sm mt-2">
+            Powered by{' '}
+            <a 
+              href="https://maishatech.co.ke" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors"
+            >
+              maishatech.co.ke
+            </a>
           </p>
         </div>
       </div>
