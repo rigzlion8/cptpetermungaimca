@@ -59,7 +59,7 @@ const UserSchema = new Schema<IUser>({
 });
 
 // Index for better query performance
-UserSchema.index({ email: 1 });
+// Note: email index is automatically created by unique: true
 UserSchema.index({ emailVerificationToken: 1 });
 UserSchema.index({ passwordResetToken: 1 });
 

@@ -74,7 +74,7 @@ const DonationSchema = new Schema<IDonation>({
 });
 
 // Indexes for better query performance
-DonationSchema.index({ paystackReference: 1 });
+// Note: paystackReference index is automatically created by unique: true
 DonationSchema.index({ status: 1 });
 DonationSchema.index({ createdAt: -1 });
 DonationSchema.index({ donorEmail: 1 });

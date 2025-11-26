@@ -100,20 +100,20 @@ export default function CampaignPlan() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+      <section className="bg-gradient-to-r from-red-600 to-red-700 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Campaign Strategy & Plan
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-red-50 max-w-4xl mx-auto">
               A comprehensive two-phase approach to secure the mandate for Ndenderu Ward
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4 text-lg">
-              <div className="bg-blue-700 px-6 py-3 rounded-lg">
+              <div className="bg-red-700 px-6 py-3 rounded-lg">
                 <span className="font-semibold">Campaign Duration:</span> 21 Months
               </div>
-              <div className="bg-blue-700 px-6 py-3 rounded-lg">
+              <div className="bg-red-700 px-6 py-3 rounded-lg">
                 <span className="font-semibold">Target Election:</span> 2027 General Elections
               </div>
             </div>
@@ -126,7 +126,7 @@ export default function CampaignPlan() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white p-8 rounded-lg shadow-md">
             <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-              <Target className="h-8 w-8 text-blue-600 mr-3" />
+              <Target className="h-8 w-8 text-red-600 mr-3" />
               The Vision: A Mandate for Ndenderu Ward
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed mb-6">
@@ -139,18 +139,18 @@ export default function CampaignPlan() {
               is a critical ward that deserves proactive and accountable leadership.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-              <div className="bg-blue-50 p-6 rounded-lg">
-                <MapPin className="h-6 w-6 text-blue-600 mb-3" />
+              <div className="bg-red-50 p-6 rounded-lg">
+                <MapPin className="h-6 w-6 text-red-600 mb-3" />
                 <h3 className="font-semibold text-gray-900 mb-2">Invest in Ward Infrastructure</h3>
                 <p className="text-gray-600 text-sm">Focus on accessible roads, water, and sanitation</p>
               </div>
-              <div className="bg-blue-50 p-6 rounded-lg">
-                <Users className="h-6 w-6 text-blue-600 mb-3" />
+              <div className="bg-red-50 p-6 rounded-lg">
+                <Users className="h-6 w-6 text-red-600 mb-3" />
                 <h3 className="font-semibold text-gray-900 mb-2">Empower the Community</h3>
                 <p className="text-gray-600 text-sm">Create sustainable opportunities for youth, women, and PLWDs</p>
               </div>
-              <div className="bg-blue-50 p-6 rounded-lg">
-                <CheckCircle className="h-6 w-6 text-blue-600 mb-3" />
+              <div className="bg-red-50 p-6 rounded-lg">
+                <CheckCircle className="h-6 w-6 text-red-600 mb-3" />
                 <h3 className="font-semibold text-gray-900 mb-2">Ensure Accountability</h3>
                 <p className="text-gray-600 text-sm">Champion transparent management of county resources</p>
               </div>
@@ -164,7 +164,7 @@ export default function CampaignPlan() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
             <div className="flex items-center mb-4">
-              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mr-4">
+                    <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-2xl mr-4">
                 1
               </div>
               <div>
@@ -185,11 +185,11 @@ export default function CampaignPlan() {
             {phase1Activities.map((activity, index) => (
               <div key={index} className="bg-gray-50 p-6 rounded-lg">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-                  {index === 0 && <Users className="h-6 w-6 text-blue-600 mr-3" />}
-                  {index === 1 && <MapPin className="h-6 w-6 text-blue-600 mr-3" />}
-                  {index === 2 && <BarChart3 className="h-6 w-6 text-blue-600 mr-3" />}
-                  {index === 3 && <Megaphone className="h-6 w-6 text-blue-600 mr-3" />}
-                  {index === 4 && <Shield className="h-6 w-6 text-blue-600 mr-3" />}
+                  {index === 0 && <Users className="h-6 w-6 text-red-600 mr-3" />}
+                  {index === 1 && <MapPin className="h-6 w-6 text-red-600 mr-3" />}
+                  {index === 2 && <BarChart3 className="h-6 w-6 text-red-600 mr-3" />}
+                  {index === 3 && <Megaphone className="h-6 w-6 text-red-600 mr-3" />}
+                  {index === 4 && <Shield className="h-6 w-6 text-red-600 mr-3" />}
                   {activity.category}
                 </h3>
                 <ul className="space-y-2">
@@ -258,7 +258,7 @@ export default function CampaignPlan() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 flex items-center justify-center">
-              <DollarSign className="h-8 w-8 text-blue-600 mr-3" />
+              <DollarSign className="h-8 w-8 text-red-600 mr-3" />
               Campaign Budget Overview
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -268,7 +268,7 @@ export default function CampaignPlan() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
             {/* Phase 1 Budget */}
-            <div className="bg-blue-50 p-6 rounded-lg">
+            <div className="bg-red-50 p-6 rounded-lg">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Phase 1 Budget</h3>
               <p className="text-gray-600 mb-6">Pre-Nomination Period (16 Months)</p>
               <div className="space-y-4">
@@ -279,15 +279,15 @@ export default function CampaignPlan() {
                         <p className="font-semibold text-gray-900">{item.category}</p>
                         <p className="text-sm text-gray-600">{item.item}</p>
                       </div>
-                      <p className="text-lg font-bold text-blue-600">{item.amount} Ksh</p>
+                      <p className="text-lg font-bold text-red-600">{item.amount} Ksh</p>
                     </div>
                   </div>
                 ))}
               </div>
-              <div className="mt-6 pt-4 border-t-2 border-blue-200">
+              <div className="mt-6 pt-4 border-t-2 border-red-200">
                 <div className="flex justify-between items-center">
                   <span className="text-xl font-bold text-gray-900">Sub-Total Phase 1:</span>
-                  <span className="text-2xl font-bold text-blue-600">16,799,000 Ksh</span>
+                  <span className="text-2xl font-bold text-red-600">16,799,000 Ksh</span>
                 </div>
               </div>
             </div>
@@ -318,26 +318,26 @@ export default function CampaignPlan() {
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-blue-600 to-green-600 text-white p-8 rounded-lg text-center">
+          <div className="bg-gradient-to-r from-red-600 to-red-700 text-white p-8 rounded-lg text-center">
             <h3 className="text-3xl font-bold mb-4">Total Campaign Budget</h3>
             <p className="text-4xl md:text-5xl font-bold mb-2">24,474,000 Ksh</p>
-            <p className="text-blue-100 text-lg">21 Months of dedicated service to Ndenderu Ward</p>
+            <p className="text-red-50 text-lg">21 Months of dedicated service to Ndenderu Ward</p>
           </div>
         </div>
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-blue-600 text-white">
+      <section className="py-16 bg-red-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Your Support Will Fuel Our Victory
           </h2>
-          <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
+          <p className="text-xl mb-8 text-red-50 max-w-3xl mx-auto">
             This campaign is not about personal wealth; it is about community investment. 
             Every contribution goes directly into maintaining our 21-month presence, ensuring 
             the Ndenderu community has a voice that is heard not just in 2027, but starting now.
           </p>
-          <p className="text-lg mb-8 text-blue-100 max-w-3xl mx-auto">
+          <p className="text-lg mb-8 text-red-50 max-w-3xl mx-auto">
             I humbly ask you to stand with me. Your financial support, prayer, and time will 
             empower us to secure the nomination and win the seat. Let us work together to bring 
             accountable leadership back to Ndenderu Ward.
@@ -345,14 +345,14 @@ export default function CampaignPlan() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/donate"
-              className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition-colors inline-flex items-center justify-center"
+              className="bg-white hover:bg-red-50 text-red-600 font-bold py-4 px-8 rounded-lg text-lg transition-colors inline-flex items-center justify-center shadow-lg"
             >
               Support Our Campaign
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
               href="/feedback"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-bold py-4 px-8 rounded-lg text-lg transition-colors inline-flex items-center justify-center"
+              className="border-2 border-white text-white hover:bg-white hover:text-red-600 font-bold py-4 px-8 rounded-lg text-lg transition-colors inline-flex items-center justify-center"
             >
               Share Your Ideas
             </Link>

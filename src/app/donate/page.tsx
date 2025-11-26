@@ -82,7 +82,7 @@ export default function DonatePage() {
           </p>
           <Link
             href="/"
-            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors inline-block"
+            className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition-colors inline-block"
           >
             Return Home
           </Link>
@@ -94,13 +94,13 @@ export default function DonatePage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+      <section className="bg-gradient-to-r from-red-600 to-red-700 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Support Our Campaign
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-red-50 max-w-4xl mx-auto">
               Your contribution helps us build a better future for Ndenderu Ward. 
               Every donation, no matter the size, makes a real difference in securing accountable leadership for our community.
             </p>
@@ -138,7 +138,7 @@ export default function DonatePage() {
                   <input
                     {...register('donorName')}
                     type="text"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                     placeholder="Enter your full name"
                   />
                   {errors.donorName && (
@@ -153,7 +153,7 @@ export default function DonatePage() {
                   <input
                     {...register('donorEmail')}
                     type="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                     placeholder="Enter your email"
                   />
                   {errors.donorEmail && (
@@ -169,7 +169,7 @@ export default function DonatePage() {
                 <input
                   {...register('donorPhone')}
                   type="tel"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                   placeholder="Enter your phone number"
                 />
                 {errors.donorPhone && (
@@ -192,7 +192,7 @@ export default function DonatePage() {
                       onClick={() => setValue('amount', amount)}
                       className={`p-3 text-center border rounded-lg font-medium transition-colors ${
                         watchedAmount === amount
-                          ? 'bg-blue-600 text-white border-blue-600'
+                          ? 'bg-red-600 text-white border-red-600'
                           : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
                       }`}
                     >
@@ -206,7 +206,7 @@ export default function DonatePage() {
                   {...register('amount', { valueAsNumber: true })}
                   type="number"
                   min="1"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                   placeholder="Enter custom amount"
                 />
                 {errors.amount && (
@@ -219,7 +219,7 @@ export default function DonatePage() {
                 <input
                   {...register('isAnonymous')}
                   type="checkbox"
-                  className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                  className="h-4 w-4 text-blue-600 focus:ring-red-500 border-gray-300 rounded"
                 />
                 <label className="ml-2 text-sm text-gray-700">
                   Make this donation anonymous
@@ -234,7 +234,7 @@ export default function DonatePage() {
                 <textarea
                   {...register('message')}
                   rows={3}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                   placeholder="Leave a message of support..."
                 />
                 {errors.message && (
@@ -243,9 +243,9 @@ export default function DonatePage() {
               </div>
 
               {/* Security Notice */}
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 flex items-start">
-                <Shield className="h-5 w-5 text-blue-500 mr-3 mt-0.5" />
-                <div className="text-sm text-blue-700">
+              <div className="bg-red-50 border border-red-200 rounded-lg p-4 flex items-start">
+                <Shield className="h-5 w-5 text-red-500 mr-3 mt-0.5" />
+                <div className="text-sm text-red-700">
                   <p className="font-medium">Secure Payment</p>
                   <p>Your payment is processed securely by Paystack. We never store your payment information.</p>
                 </div>
@@ -255,7 +255,7 @@ export default function DonatePage() {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-bold py-4 px-6 rounded-lg text-lg transition-colors flex items-center justify-center"
+                className="w-full bg-red-600 hover:bg-red-700 disabled:bg-red-400 text-white font-bold py-4 px-6 rounded-lg text-lg transition-colors flex items-center justify-center"
               >
                 {isLoading ? (
                   <>
@@ -305,7 +305,7 @@ export default function DonatePage() {
               }
             ].map((item, index) => (
               <div key={index} className="text-center">
-                <div className="text-blue-600 mb-4 flex justify-center">{item.icon}</div>
+                <div className="text-red-600 mb-4 flex justify-center">{item.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{item.title}</h3>
                 <p className="text-gray-600">{item.description}</p>
               </div>

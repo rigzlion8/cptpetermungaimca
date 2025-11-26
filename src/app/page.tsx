@@ -5,28 +5,35 @@ export default function Home() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+      <section className="relative bg-gradient-to-r from-red-600 to-red-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
+            <div className="flex justify-center mb-6">
+              <img 
+                src="/jubilee.jpeg" 
+                alt="Jubilee Party" 
+                className="h-20 w-20 md:h-24 md:w-24 rounded-full border-4 border-white shadow-lg object-cover"
+              />
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               A Mandate for
-              <span className="block text-yellow-300">Ndenderu Ward</span>
+              <span className="block text-white">Ndenderu Ward</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl mb-8 text-red-50 max-w-3xl mx-auto">
               Hon. Peter Mungai - Member of County Assembly Candidate
               <span className="block mt-2 text-lg">Kiambaa Constituency, Kiambu County | 2027 General Elections</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/donate"
-                className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition-colors inline-flex items-center justify-center"
+                className="bg-white hover:bg-red-50 text-red-600 font-bold py-4 px-8 rounded-lg text-lg transition-colors inline-flex items-center justify-center shadow-lg"
               >
                 Support Our Campaign
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
                 href="/plan"
-                className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-bold py-4 px-8 rounded-lg text-lg transition-colors inline-flex items-center justify-center"
+                className="border-2 border-white text-white hover:bg-white hover:text-red-600 font-bold py-4 px-8 rounded-lg text-lg transition-colors inline-flex items-center justify-center"
               >
                 View Campaign Strategy
               </Link>
@@ -65,8 +72,8 @@ export default function Home() {
                 description: "Champion transparent management of county resources and citizen participation in ward development planning."
               }
             ].map((item, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <div className="text-blue-600 mb-4">{item.icon}</div>
+              <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border-l-4 border-red-600">
+                <div className="text-red-600 mb-4">{item.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{item.title}</h3>
                 <p className="text-gray-600">{item.description}</p>
               </div>
@@ -76,26 +83,26 @@ export default function Home() {
       </section>
 
       {/* Call to Action Section */}
-      <section className="py-16 bg-blue-600 text-white">
+      <section className="py-16 bg-red-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Make a Difference?
           </h2>
-          <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
+          <p className="text-xl mb-8 text-red-50 max-w-2xl mx-auto">
             Your support can help us bring positive change to Ndenderu Ward. 
             Every contribution, no matter how small, makes a difference in securing accountable leadership.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/donate"
-              className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition-colors inline-flex items-center justify-center"
+              className="bg-white hover:bg-red-50 text-red-600 font-bold py-4 px-8 rounded-lg text-lg transition-colors inline-flex items-center justify-center shadow-lg"
             >
               Donate Now
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
               href="/testimonials"
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-bold py-4 px-8 rounded-lg text-lg transition-colors inline-flex items-center justify-center"
+              className="border-2 border-white text-white hover:bg-white hover:text-red-600 font-bold py-4 px-8 rounded-lg text-lg transition-colors inline-flex items-center justify-center"
             >
               Read Success Stories
             </Link>
@@ -123,7 +130,7 @@ export default function Home() {
               { number: "21", label: "Months Campaign Duration" }
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
+                <div className="text-4xl md:text-5xl font-bold text-red-600 mb-2">
                   {stat.number}
                 </div>
                 <div className="text-gray-600 text-lg">

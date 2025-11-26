@@ -3,7 +3,7 @@ import { MapPin, Phone, Mail, Facebook, Twitter, Instagram } from 'lucide-react'
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-red-700 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Campaign Info */}
@@ -63,15 +63,15 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <div className="space-y-3">
               <div className="flex items-center">
-                <MapPin className="h-5 w-5 text-blue-400 mr-3" />
+                <MapPin className="h-5 w-5 text-red-400 mr-3" />
                 <span className="text-gray-300">Ndenderu Ward, Kiambaa Constituency, Kiambu County</span>
               </div>
               <div className="flex items-center">
-                <Phone className="h-5 w-5 text-blue-400 mr-3" />
+                <Phone className="h-5 w-5 text-red-400 mr-3" />
                 <span className="text-gray-300">+254 700 000 000</span>
               </div>
               <div className="flex items-center">
-                <Mail className="h-5 w-5 text-blue-400 mr-3" />
+                <Mail className="h-5 w-5 text-red-400 mr-3" />
                 <span className="text-gray-300">info@mca-campaign.com</span>
               </div>
             </div>
