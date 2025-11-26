@@ -80,6 +80,10 @@ export interface PaymentVerificationResponse {
 }
 
 export async function initializePayment(paymentData: PaymentData): Promise<PaymentResponse> {
+  if (!PAYSTACK_SECRET_KEY) {
+    throw new Error('Paystack secret key is not configured. Please set PAYSTACK_SECRET_KEY environment variable.');
+  }
+
   const response = await fetch('https://api.paystack.co/transaction/initialize', {
     method: 'POST',
     headers: {
@@ -97,11 +101,18 @@ export async function initializePayment(paymentData: PaymentData): Promise<Payme
   });
 
   if (!response.ok) {
-    const error = await response.json();
-    throw new Error(error.message || 'Failed to initialize payment');
+    const errorData = await response.json().catch(() => ({ message: 'Unknown error from Paystack API' }));
+    const errorMessage = errorData.message || errorData.error || 'Failed to initialize payment';
+    throw new Error(`Paystack API Error: ${errorMessage}`);
   }
 
-  return response.json();
+  const result = await response.json();
+  
+  if (!result.status) {
+    throw new Error(result.message || 'Failed to initialize payment');
+  }
+
+  return result;
 }
 
 export async function verifyPayment(reference: string): Promise<PaymentVerificationResponse> {

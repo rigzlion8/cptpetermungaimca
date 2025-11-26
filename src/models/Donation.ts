@@ -7,7 +7,7 @@ export interface IDonation extends Document {
   amount: number;
   currency: string;
   paystackReference: string;
-  paystackTransactionId: string;
+  paystackTransactionId?: string;
   status: 'pending' | 'success' | 'failed' | 'cancelled';
   paymentMethod: string;
   isAnonymous: boolean;
@@ -49,7 +49,7 @@ const DonationSchema = new Schema<IDonation>({
   },
   paystackTransactionId: {
     type: String,
-    required: true,
+    default: '',
   },
   status: {
     type: String,

@@ -20,7 +20,6 @@ async function handler(request: NextRequest) {
     const donation = new Donation({
       ...validatedData,
       paystackReference: reference,
-      paystackTransactionId: '', // Will be updated after payment
       status: 'pending',
       paymentMethod: 'paystack',
     });
@@ -43,6 +42,15 @@ async function handler(request: NextRequest) {
 
     const paymentResponse = await initializePayment(paymentData);
 
+    if (!paymentResponse.data || !paymentResponse.data.authorization_url) {
+      // Delete the donation record if payment initialization failed
+      await Donation.findByIdAndDelete(donation._id);
+      return NextResponse.json(
+        { success: false, message: 'Failed to get payment authorization URL from Paystack' },
+        { status: 500 }
+      );
+    }
+
     return NextResponse.json({
       success: true,
       message: 'Payment initialized successfully',
@@ -62,8 +70,16 @@ async function handler(request: NextRequest) {
       );
     }
 
+    // Check if it's a Paystack API error
+    if (error.message) {
+      return NextResponse.json(
+        { success: false, message: error.message || 'Failed to initialize donation' },
+        { status: 500 }
+      );
+    }
+
     return NextResponse.json(
-      { success: false, message: 'Failed to initialize donation' },
+      { success: false, message: 'Failed to initialize donation. Please check your Paystack configuration.' },
       { status: 500 }
     );
   }
