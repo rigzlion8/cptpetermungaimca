@@ -32,7 +32,7 @@ export default function Header() {
                 className="h-10 w-10 rounded-full border-2 border-red-600 object-cover"
               />
               <span className="ml-3 text-xl font-bold text-gray-900">
-                Peter Mungai
+                Hon. Peter Mungai MCA
               </span>
             </Link>
           </div>

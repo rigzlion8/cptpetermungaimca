@@ -54,7 +54,7 @@ export default function TestimonialsPage() {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-red-600 mx-auto mb-4"></div>
           <p className="text-gray-600">Loading testimonials...</p>
         </div>
       </div>
@@ -64,13 +64,13 @@ export default function TestimonialsPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+      <section className="bg-gradient-to-r from-red-600 to-red-700 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               What People Are Saying
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-red-50 max-w-4xl mx-auto">
               Hear from community members who have experienced the positive impact 
               of our campaign and development initiatives.
             </p>
@@ -111,7 +111,7 @@ export default function TestimonialsPage() {
 
                   {/* Quote */}
                   <div className="mb-6">
-                    <Quote className="h-8 w-8 text-blue-200 mb-3" />
+                    <Quote className="h-8 w-8 text-red-200 mb-3" />
                     <p className="text-gray-700 italic leading-relaxed">
                       "{testimonial.content}"
                     </p>
@@ -127,8 +127,8 @@ export default function TestimonialsPage() {
                           className="h-12 w-12 rounded-full object-cover"
                         />
                       ) : (
-                        <div className="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center">
-                          <User className="h-6 w-6 text-blue-600" />
+                        <div className="h-12 w-12 rounded-full bg-red-100 flex items-center justify-center">
+                          <User className="h-6 w-6 text-red-600" />
                         </div>
                       )}
                     </div>
@@ -150,18 +150,18 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Add Testimonial CTA */}
-      <section className="py-16 bg-blue-600 text-white">
+      <section className="py-16 bg-red-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Share Your Experience
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-red-50 mb-8 max-w-3xl mx-auto">
             Have you been impacted by our campaign or community programs? 
             We'd love to hear your story and share it with others.
           </p>
           <a
             href="/feedback"
-            className="bg-yellow-500 hover:bg-yellow-600 text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition-colors inline-flex items-center"
+            className="bg-white hover:bg-red-50 text-red-600 font-bold py-4 px-8 rounded-lg text-lg transition-colors inline-flex items-center shadow-lg"
           >
             Share Your Story
           </a>
@@ -188,7 +188,7 @@ export default function TestimonialsPage() {
               { number: "24/7", label: "Support Available" }
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
+                <div className="text-4xl md:text-5xl font-bold text-red-600 mb-2">
                   {stat.number}
                 </div>
                 <div className="text-gray-600 text-lg">

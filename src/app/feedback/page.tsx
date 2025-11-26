@@ -77,7 +77,7 @@ export default function FeedbackPage() {
           </p>
           <button
             onClick={() => setIsSubmitted(false)}
-            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+            className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
           >
             Submit Another Feedback
           </button>
@@ -89,13 +89,13 @@ export default function FeedbackPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+      <section className="bg-gradient-to-r from-red-600 to-red-700 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Share Your Feedback
             </h1>
-            <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto">
+            <p className="text-xl md:text-2xl text-red-50 max-w-4xl mx-auto">
               Your voice matters! Help us improve our campaign and community programs 
               by sharing your thoughts, suggestions, and concerns.
             </p>
@@ -108,25 +108,25 @@ export default function FeedbackPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                <Mail className="h-8 w-8 text-blue-600" />
+              <div className="bg-red-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                <Mail className="h-8 w-8 text-red-600" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Us</h3>
               <p className="text-gray-600">info@mca-campaign.com</p>
             </div>
             <div className="text-center">
-              <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                <Phone className="h-8 w-8 text-blue-600" />
+              <div className="bg-red-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                <Phone className="h-8 w-8 text-red-600" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Call Us</h3>
               <p className="text-gray-600">+254 700 000 000</p>
             </div>
             <div className="text-center">
-              <div className="bg-blue-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                <MapPin className="h-8 w-8 text-blue-600" />
+              <div className="bg-red-100 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                <MapPin className="h-8 w-8 text-red-600" />
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Visit Us</h3>
-              <p className="text-gray-600">Ruaka/Ndenderu Ward, Kiambu County</p>
+              <p className="text-gray-600">Ndenderu Ward, Kiambaa Constituency, Kiambu County</p>
             </div>
           </div>
         </div>
@@ -162,7 +162,7 @@ export default function FeedbackPage() {
                   <input
                     {...register('name')}
                     type="text"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                     placeholder="Enter your full name"
                   />
                   {errors.name && (
@@ -177,7 +177,7 @@ export default function FeedbackPage() {
                   <input
                     {...register('email')}
                     type="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                     placeholder="Enter your email"
                   />
                   {errors.email && (
@@ -195,7 +195,7 @@ export default function FeedbackPage() {
                   <input
                     {...register('subject')}
                     type="text"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                     placeholder="Brief description of your feedback"
                   />
                   {errors.subject && (
@@ -209,7 +209,7 @@ export default function FeedbackPage() {
                   </label>
                   <select
                     {...register('category')}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                   >
                     <option value="general">General Inquiry</option>
                     <option value="suggestion">Suggestion</option>
@@ -230,7 +230,7 @@ export default function FeedbackPage() {
                 <textarea
                   {...register('message')}
                   rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                   placeholder="Please provide detailed feedback about your experience, suggestions, or concerns..."
                 />
                 {errors.message && (
@@ -242,7 +242,7 @@ export default function FeedbackPage() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-bold py-4 px-6 rounded-lg text-lg transition-colors flex items-center justify-center"
+                className="w-full bg-red-600 hover:bg-red-700 disabled:bg-red-400 text-white font-bold py-4 px-6 rounded-lg text-lg transition-colors flex items-center justify-center"
               >
                 {isSubmitting ? (
                   <>
@@ -296,8 +296,8 @@ export default function FeedbackPage() {
                 description: "Help with accessing our services or programs"
               }
             ].map((item, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center">
-                <div className="text-blue-600 mb-4 flex justify-center">{item.icon}</div>
+              <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center border-l-4 border-red-600">
+                <div className="text-red-600 mb-4 flex justify-center">{item.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{item.title}</h3>
                 <p className="text-gray-600">{item.description}</p>
               </div>
