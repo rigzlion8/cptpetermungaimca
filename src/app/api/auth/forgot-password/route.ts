@@ -4,6 +4,7 @@ import connectDB from '@/lib/mongodb';
 import User from '@/models/User';
 import { generatePasswordResetToken } from '@/lib/auth';
 import { sendEmail, generatePasswordResetTemplate } from '@/lib/email';
+import { getBaseUrl } from '@/lib/url';
 
 export async function POST(request: NextRequest) {
   try {
@@ -29,7 +30,8 @@ export async function POST(request: NextRequest) {
     await user.save();
 
     // Send password reset email
-    const resetLink = `${process.env.NEXT_PUBLIC_APP_URL}/reset-password?token=${passwordResetToken}`;
+    const baseUrl = getBaseUrl(request);
+    const resetLink = `${baseUrl}/reset-password?token=${passwordResetToken}`;
     const emailTemplate = generatePasswordResetTemplate(
       `${user.firstName} ${user.lastName}`,
       resetLink

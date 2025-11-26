@@ -83,10 +83,10 @@ export default function RegisterPage() {
             <p className="mt-2 text-sm text-gray-600">
               Please check your email for verification instructions.
             </p>
-            <div className="mt-6 bg-blue-50 border border-blue-200 rounded-lg p-4">
+            <div className="mt-6 bg-red-50 border border-red-200 rounded-lg p-4">
               <div className="flex items-center">
-                <Mail className="h-5 w-5 text-blue-500 mr-3" />
-                <span className="text-blue-700 text-sm">
+                <Mail className="h-5 w-5 text-red-500 mr-3" />
+                <span className="text-red-700 text-sm">
                   We've sent a verification link to your email address.
                 </span>
               </div>
@@ -94,7 +94,7 @@ export default function RegisterPage() {
             <div className="mt-6">
               <Link
                 href="/"
-                className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-colors"
+                className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-lg transition-colors"
               >
                 Continue to Home
               </Link>
@@ -109,7 +109,7 @@ export default function RegisterPage() {
     <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <div className="text-center">
-          <div className="h-12 w-12 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div className="h-12 w-12 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
             <User className="h-6 w-6 text-white" />
           </div>
           <h2 className="text-3xl font-bold text-gray-900">
@@ -119,7 +119,7 @@ export default function RegisterPage() {
             Or{' '}
             <Link
               href="/login"
-              className="font-medium text-blue-600 hover:text-blue-500"
+              className="font-medium text-red-600 hover:text-red-500"
             >
               sign in to your existing account
             </Link>
@@ -146,7 +146,7 @@ export default function RegisterPage() {
                   {...register('firstName')}
                   type="text"
                   autoComplete="given-name"
-                  className="mt-1 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                  className="mt-1 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
                   placeholder="First name"
                 />
                 {errors.firstName && (
@@ -162,7 +162,7 @@ export default function RegisterPage() {
                   {...register('lastName')}
                   type="text"
                   autoComplete="family-name"
-                  className="mt-1 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                  className="mt-1 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
                   placeholder="Last name"
                 />
                 {errors.lastName && (
@@ -180,7 +180,7 @@ export default function RegisterPage() {
                   {...register('email')}
                   type="email"
                   autoComplete="email"
-                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm pl-10"
+                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm pl-10"
                   placeholder="Enter your email"
                 />
                 <Mail className="h-5 w-5 text-gray-400 absolute left-3 top-2.5" />
@@ -198,7 +198,7 @@ export default function RegisterPage() {
                 {...register('phone')}
                 type="tel"
                 autoComplete="tel"
-                className="mt-1 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                className="mt-1 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
                 placeholder="Enter your phone number"
               />
               {errors.phone && (
@@ -215,7 +215,7 @@ export default function RegisterPage() {
                   {...register('password')}
                   type={showPassword ? 'text' : 'password'}
                   autoComplete="new-password"
-                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm pl-10 pr-10"
+                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm pl-10 pr-10"
                   placeholder="Create a password"
                 />
                 <Lock className="h-5 w-5 text-gray-400 absolute left-3 top-2.5" />
@@ -261,7 +261,7 @@ export default function RegisterPage() {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:bg-blue-400"
+                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 disabled:bg-red-400"
               >
                 {isLoading ? (
                   <>
@@ -289,7 +289,7 @@ export default function RegisterPage() {
               <p className="text-sm text-gray-600">
                 <Link
                   href="/login"
-                  className="font-medium text-blue-600 hover:text-blue-500"
+                  className="font-medium text-red-600 hover:text-red-500"
                 >
                   Sign in here
                 </Link>

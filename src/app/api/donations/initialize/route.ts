@@ -4,6 +4,7 @@ import connectDB from '@/lib/mongodb';
 import Donation from '@/models/Donation';
 import { initializePayment, generateReference } from '@/lib/paystack';
 import { withRateLimit } from '@/lib/rate-limit';
+import { getBaseUrl } from '@/lib/url';
 
 async function handler(request: NextRequest) {
   try {
@@ -37,7 +38,7 @@ async function handler(request: NextRequest) {
         donorName: validatedData.donorName,
         isAnonymous: validatedData.isAnonymous,
       },
-      callback_url: `${process.env.NEXT_PUBLIC_APP_URL}/donate/success`,
+      callback_url: `${getBaseUrl(request)}/donate/success`,
     };
 
     const paymentResponse = await initializePayment(paymentData);

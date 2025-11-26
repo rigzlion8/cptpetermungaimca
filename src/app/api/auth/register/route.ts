@@ -4,6 +4,7 @@ import connectDB from '@/lib/mongodb';
 import User from '@/models/User';
 import { hashPassword, generateToken, generateEmailVerificationToken } from '@/lib/auth';
 import { sendEmail, generateEmailVerificationTemplate } from '@/lib/email';
+import { getBaseUrl } from '@/lib/url';
 
 export async function POST(request: NextRequest) {
   try {
@@ -37,7 +38,8 @@ export async function POST(request: NextRequest) {
     await user.save();
 
     // Send verification email
-    const verificationLink = `${process.env.NEXT_PUBLIC_APP_URL}/verify-email?token=${emailVerificationToken}`;
+    const baseUrl = getBaseUrl(request);
+    const verificationLink = `${baseUrl}/verify-email?token=${emailVerificationToken}`;
     const emailTemplate = generateEmailVerificationTemplate(
       `${user.firstName} ${user.lastName}`,
       verificationLink
