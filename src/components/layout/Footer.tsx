@@ -80,7 +80,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2025-2027 Peter Mungai Campaign. All rights reserved. | 
+            © 2025-2027 Peter Mungai MCA Campaign. All rights reserved. | 
             <Link href="/privacy" className="ml-1 hover:text-white transition-colors">
               Privacy Policy
             </Link>

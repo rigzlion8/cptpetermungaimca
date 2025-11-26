@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, Users, Heart, MapPin, Star, CheckCircle } from 'lucide-react';
+import { ArrowRight, Users, MapPin, CheckCircle } from 'lucide-react';
 
 export default function Home() {
   return (

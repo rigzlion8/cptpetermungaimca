@@ -34,7 +34,7 @@ export async function sendEmail({ to, subject, html, text }: EmailOptions) {
 
 export function generateEmailVerificationTemplate(name: string, verificationLink: string) {
   return {
-    subject: 'Verify Your Email - MCA Campaign',
+    subject: 'Verify Your Email - Peter Mungai MCA Campaign',
     html: `
       <!DOCTYPE html>
       <html>
@@ -46,7 +46,7 @@ export function generateEmailVerificationTemplate(name: string, verificationLink
           <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
             <h2 style="color: #2563eb;">Welcome to Our Campaign!</h2>
             <p>Hello ${name},</p>
-            <p>Thank you for registering with our MCA campaign website. Please verify your email address to complete your registration.</p>
+            <p>Thank you for registering with the Peter Mungai MCA Campaign website. Please verify your email address to complete your registration.</p>
             <div style="text-align: center; margin: 30px 0;">
               <a href="${verificationLink}" 
                  style="background-color: #2563eb; color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; display: inline-block;">
@@ -69,7 +69,7 @@ export function generateEmailVerificationTemplate(name: string, verificationLink
       
       Hello ${name},
       
-      Thank you for registering with our MCA campaign website. Please verify your email address to complete your registration.
+      Thank you for registering with the Peter Mungai MCA Campaign website. Please verify your email address to complete your registration.
       
       Click this link to verify: ${verificationLink}
       
@@ -82,7 +82,7 @@ export function generateEmailVerificationTemplate(name: string, verificationLink
 
 export function generatePasswordResetTemplate(name: string, resetLink: string) {
   return {
-    subject: 'Reset Your Password - MCA Campaign',
+    subject: 'Reset Your Password - Peter Mungai MCA Campaign',
     html: `
       <!DOCTYPE html>
       <html>
@@ -130,7 +130,7 @@ export function generatePasswordResetTemplate(name: string, resetLink: string) {
 
 export function generateDonationConfirmationTemplate(donorName: string, amount: number, reference: string) {
   return {
-    subject: 'Thank You for Your Donation - MCA Campaign',
+    subject: 'Thank You for Your Donation - Peter Mungai MCA Campaign',
     html: `
       <!DOCTYPE html>
       <html>
@@ -142,14 +142,14 @@ export function generateDonationConfirmationTemplate(donorName: string, amount: 
           <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
             <h2 style="color: #16a34a;">Thank You for Your Support!</h2>
             <p>Hello ${donorName},</p>
-            <p>Thank you for your generous donation of <strong>KES ${amount.toLocaleString()}</strong> to our MCA campaign.</p>
+            <p>Thank you for your generous donation of <strong>KES ${amount.toLocaleString()}</strong> to the Peter Mungai MCA Campaign.</p>
             <div style="background-color: #f8fafc; padding: 20px; border-radius: 5px; margin: 20px 0;">
               <h3 style="margin-top: 0;">Donation Details</h3>
               <p><strong>Amount:</strong> KES ${amount.toLocaleString()}</p>
               <p><strong>Reference:</strong> ${reference}</p>
               <p><strong>Date:</strong> ${new Date().toLocaleDateString()}</p>
             </div>
-            <p>Your contribution will help us make a positive impact in the Ruaka/Ndenderu Ward. We appreciate your support!</p>
+            <p>Your contribution will help us make a positive impact in Ndenderu Ward. We appreciate your support!</p>
             <hr style="margin: 30px 0; border: none; border-top: 1px solid #eee;">
             <p style="font-size: 12px; color: #666;">
               This is an automated confirmation. Please keep this email for your records.
@@ -163,14 +163,14 @@ export function generateDonationConfirmationTemplate(donorName: string, amount: 
       
       Hello ${donorName},
       
-      Thank you for your generous donation of KES ${amount.toLocaleString()} to our MCA campaign.
+      Thank you for your generous donation of KES ${amount.toLocaleString()} to the Peter Mungai MCA Campaign.
       
       Donation Details:
       - Amount: KES ${amount.toLocaleString()}
       - Reference: ${reference}
       - Date: ${new Date().toLocaleDateString()}
       
-      Your contribution will help us make a positive impact in the Ruaka/Ndenderu Ward. We appreciate your support!
+      Your contribution will help us make a positive impact in Ndenderu Ward. We appreciate your support!
       
       This is an automated confirmation. Please keep this email for your records.
     `,

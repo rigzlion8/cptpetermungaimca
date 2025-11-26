@@ -1,4 +1,4 @@
-import { Calendar, Target, Users, MapPin, CheckCircle, ArrowRight, DollarSign, BarChart3, Megaphone, Shield } from 'lucide-react';
+import { Target, Users, MapPin, CheckCircle, ArrowRight, DollarSign, BarChart3, Megaphone, Shield } from 'lucide-react';
 import Link from 'next/link';
 
 export default function CampaignPlan() {

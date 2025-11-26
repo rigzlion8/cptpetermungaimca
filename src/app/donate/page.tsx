@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { donationSchema } from '@/lib/validations';
 import { Heart, CreditCard, Shield, CheckCircle, AlertCircle } from 'lucide-react';
+import Link from 'next/link';
 
 interface DonationFormData {
   donorName: string;
@@ -18,7 +19,7 @@ interface DonationFormData {
 
 export default function DonatePage() {
   const [isLoading, setIsLoading] = useState(false);
-  const [donationSuccess, setDonationSuccess] = useState(false);
+  const [donationSuccess] = useState(false);
   const [error, setError] = useState('');
 
   const {
@@ -60,7 +61,7 @@ export default function DonatePage() {
       } else {
         setError(result.message || 'Failed to initialize donation');
       }
-    } catch (err) {
+    } catch {
       setError('An error occurred. Please try again.');
     } finally {
       setIsLoading(false);
@@ -79,12 +80,12 @@ export default function DonatePage() {
             Your donation has been processed successfully. We appreciate your support 
             for our campaign and the community.
           </p>
-          <a
+          <Link
             href="/"
-            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors inline-block"
           >
             Return Home
-          </a>
+          </Link>
         </div>
       </div>
     );
