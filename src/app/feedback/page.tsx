@@ -162,7 +162,7 @@ export default function FeedbackPage() {
                   <input
                     {...register('name')}
                     type="text"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent text-gray-900"
                     placeholder="Enter your full name"
                   />
                   {errors.name && (
@@ -177,7 +177,7 @@ export default function FeedbackPage() {
                   <input
                     {...register('email')}
                     type="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent text-gray-900"
                     placeholder="Enter your email"
                   />
                   {errors.email && (
@@ -195,7 +195,7 @@ export default function FeedbackPage() {
                   <input
                     {...register('subject')}
                     type="text"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent text-gray-900"
                     placeholder="Brief description of your feedback"
                   />
                   {errors.subject && (
@@ -209,7 +209,7 @@ export default function FeedbackPage() {
                   </label>
                   <select
                     {...register('category')}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent text-gray-900"
                   >
                     <option value="general">General Inquiry</option>
                     <option value="suggestion">Suggestion</option>
@@ -230,7 +230,7 @@ export default function FeedbackPage() {
                 <textarea
                   {...register('message')}
                   rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent text-gray-900"
                   placeholder="Please provide detailed feedback about your experience, suggestions, or concerns..."
                 />
                 {errors.message && (

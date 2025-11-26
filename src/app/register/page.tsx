@@ -151,7 +151,7 @@ export default function RegisterPage() {
                   {...register('firstName')}
                   type="text"
                   autoComplete="given-name"
-                  className="mt-1 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
+                  className="mt-1 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm text-gray-900"
                   placeholder="First name"
                 />
                 {errors.firstName && (
@@ -167,7 +167,7 @@ export default function RegisterPage() {
                   {...register('lastName')}
                   type="text"
                   autoComplete="family-name"
-                  className="mt-1 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
+                  className="mt-1 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm text-gray-900"
                   placeholder="Last name"
                 />
                 {errors.lastName && (
@@ -185,7 +185,7 @@ export default function RegisterPage() {
                   {...register('email')}
                   type="email"
                   autoComplete="email"
-                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm pl-10"
+                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm pl-10 text-gray-900"
                   placeholder="Enter your email"
                 />
                 <Mail className="h-5 w-5 text-gray-400 absolute left-3 top-2.5" />
@@ -203,8 +203,8 @@ export default function RegisterPage() {
                 {...register('phone')}
                 type="tel"
                 autoComplete="tel"
-                className="mt-1 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm"
-                placeholder="Enter your phone number"
+                  className="mt-1 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm text-gray-900"
+                  placeholder="Enter your phone number"
               />
               {errors.phone && (
                 <p className="mt-1 text-sm text-red-600">{errors.phone.message}</p>
@@ -220,7 +220,7 @@ export default function RegisterPage() {
                   {...register('password')}
                   type={showPassword ? 'text' : 'password'}
                   autoComplete="new-password"
-                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm pl-10 pr-10"
+                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm pl-10 pr-10 text-gray-900"
                   placeholder="Create a password"
                 />
                 <Lock className="h-5 w-5 text-gray-400 absolute left-3 top-2.5" />
@@ -271,7 +271,7 @@ export default function RegisterPage() {
                   {...register('confirmPassword')}
                   type={showConfirmPassword ? 'text' : 'password'}
                   autoComplete="new-password"
-                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm pl-10 pr-10"
+                  className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm pl-10 pr-10 text-gray-900"
                   placeholder="Confirm your password"
                 />
                 <Lock className="h-5 w-5 text-gray-400 absolute left-3 top-2.5" />

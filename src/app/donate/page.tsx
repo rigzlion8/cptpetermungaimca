@@ -138,7 +138,7 @@ export default function DonatePage() {
                   <input
                     {...register('donorName')}
                     type="text"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent text-gray-900"
                     placeholder="Enter your full name"
                   />
                   {errors.donorName && (
@@ -153,7 +153,7 @@ export default function DonatePage() {
                   <input
                     {...register('donorEmail')}
                     type="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent text-gray-900"
                     placeholder="Enter your email"
                   />
                   {errors.donorEmail && (
@@ -169,8 +169,8 @@ export default function DonatePage() {
                 <input
                   {...register('donorPhone')}
                   type="tel"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
-                  placeholder="Enter your phone number"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent text-gray-900"
+                    placeholder="Enter your phone number"
                 />
                 {errors.donorPhone && (
                   <p className="mt-1 text-sm text-red-600">{errors.donorPhone.message}</p>
@@ -206,7 +206,7 @@ export default function DonatePage() {
                   {...register('amount', { valueAsNumber: true })}
                   type="number"
                   min="1"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent text-gray-900"
                   placeholder="Enter custom amount"
                 />
                 {errors.amount && (
@@ -234,7 +234,7 @@ export default function DonatePage() {
                 <textarea
                   {...register('message')}
                   rows={3}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent text-gray-900"
                   placeholder="Leave a message of support..."
                 />
                 {errors.message && (
