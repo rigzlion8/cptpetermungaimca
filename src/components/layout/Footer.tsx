@@ -8,9 +8,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Campaign Info */}
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-lg font-semibold mb-4">MCA Campaign - Ruaka/Ndenderu Ward</h3>
+            <h3 className="text-lg font-semibold mb-4">Hon. Peter Mungai - Ndenderu Ward</h3>
             <p className="text-gray-300 mb-4">
-              Committed to serving the people of Ruaka and Ndenderu Ward with integrity, 
+              Committed to serving the people of Ndenderu Ward, Kiambaa Constituency, Kiambu County with integrity, 
               transparency, and dedication. Together, we can build a better future for our community.
             </p>
             <div className="flex space-x-4">
@@ -32,7 +32,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link href="/plan" className="text-gray-300 hover:text-white transition-colors">
-                  5-Year Plan
+                  Campaign Strategy
                 </Link>
               </li>
               <li>
@@ -64,7 +64,7 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center">
                 <MapPin className="h-5 w-5 text-blue-400 mr-3" />
-                <span className="text-gray-300">Ruaka/Ndenderu Ward, Kiambu County</span>
+                <span className="text-gray-300">Ndenderu Ward, Kiambaa Constituency, Kiambu County</span>
               </div>
               <div className="flex items-center">
                 <Phone className="h-5 w-5 text-blue-400 mr-3" />
@@ -80,7 +80,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 MCA Campaign. All rights reserved. | 
+            © 2025-2027 Peter Mungai Campaign. All rights reserved. | 
             <Link href="/privacy" className="ml-1 hover:text-white transition-colors">
               Privacy Policy
             </Link>

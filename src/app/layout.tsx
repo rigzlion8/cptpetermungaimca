@@ -10,13 +10,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "MCA Campaign - Ruaka/Ndenderu Ward",
-  description: "Join us in building a better future for Ruaka and Ndenderu Ward. Support our MCA campaign for positive change and community development.",
-  keywords: "MCA, campaign, Ruaka, Ndenderu, Ward, Kiambu, County, politics, development",
-  authors: [{ name: "MCA Campaign Team" }],
+  title: "Peter Mungai - A Mandate for Ndenderu Ward",
+  description: "Hon. Peter Mungai - Member of County Assembly Candidate for Ndenderu Ward, Kiambaa Constituency, Kiambu County. 2027 General Elections campaign focused on infrastructure, community empowerment, and accountability.",
+  keywords: "Peter Mungai, MCA, campaign, Ndenderu Ward, Kiambaa Constituency, Kiambu County, 2027 elections, politics, development",
+  authors: [{ name: "Peter Mungai Campaign Team" }],
   openGraph: {
-    title: "MCA Campaign - Ruaka/Ndenderu Ward",
-    description: "Join us in building a better future for Ruaka and Ndenderu Ward.",
+    title: "Peter Mungai - A Mandate for Ndenderu Ward",
+    description: "Join us in building a better future for Ndenderu Ward, Kiambaa Constituency, Kiambu County.",
     type: "website",
     locale: "en_KE",
   },

@@ -100,8 +100,8 @@ export default function DonatePage() {
               Support Our Campaign
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto">
-              Your contribution helps us build a better future for Ruaka and Ndenderu Ward. 
-              Every donation, no matter the size, makes a real difference in our community.
+              Your contribution helps us build a better future for Ndenderu Ward. 
+              Every donation, no matter the size, makes a real difference in securing accountable leadership for our community.
             </p>
           </div>
         </div>

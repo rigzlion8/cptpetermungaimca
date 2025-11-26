@@ -7,7 +7,7 @@ import { Menu, X, User, LogOut } from 'lucide-react';
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: '5-Year Plan', href: '/plan' },
+  { name: 'Campaign Strategy', href: '/plan' },
   { name: 'Donate', href: '/donate' },
   { name: 'Testimonials', href: '/testimonials' },
   { name: 'Feedback', href: '/feedback' },
@@ -30,7 +30,7 @@ export default function Header() {
                 <span className="text-white font-bold text-sm">M</span>
               </div>
               <span className="ml-2 text-xl font-bold text-gray-900">
-                MCA Campaign
+                Peter Mungai
               </span>
             </Link>
           </div>

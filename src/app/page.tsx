@@ -9,12 +9,12 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Building a Better Future for
-              <span className="block text-yellow-300">Ruaka & Ndenderu Ward</span>
+              A Mandate for
+              <span className="block text-yellow-300">Ndenderu Ward</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-              Join our MCA campaign for positive change, community development, 
-              and transparent leadership that puts people first.
+              Hon. Peter Mungai - Member of County Assembly Candidate
+              <span className="block mt-2 text-lg">Kiambaa Constituency, Kiambu County | 2027 General Elections</span>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -28,7 +28,7 @@ export default function Home() {
                 href="/plan"
                 className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-bold py-4 px-8 rounded-lg text-lg transition-colors inline-flex items-center justify-center"
               >
-                View Our 5-Year Plan
+                View Campaign Strategy
               </Link>
             </div>
           </div>
@@ -40,44 +40,29 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Key Focus Areas
+              Our Core Commitment
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're committed to addressing the most pressing issues facing our community
+              Three pillars that will guide our service to Ndenderu Ward
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                icon: <Users className="h-8 w-8" />,
-                title: "Youth Empowerment",
-                description: "Creating opportunities for young people through skills training, mentorship programs, and job creation initiatives."
-              },
-              {
-                icon: <Heart className="h-8 w-8" />,
-                title: "Healthcare Access",
-                description: "Improving healthcare facilities and ensuring affordable, quality medical care for all residents."
-              },
-              {
                 icon: <MapPin className="h-8 w-8" />,
-                title: "Infrastructure Development",
-                description: "Building better roads, water systems, and public facilities to improve quality of life."
+                title: "Invest in Ward Infrastructure",
+                description: "Focus on accessible roads, water, and sanitation to improve the quality of life for all residents."
               },
               {
-                icon: <Star className="h-8 w-8" />,
-                title: "Education Excellence",
-                description: "Supporting schools and educational programs to ensure every child has access to quality education."
+                icon: <Users className="h-8 w-8" />,
+                title: "Empower the Community",
+                description: "Create sustainable opportunities for youth, women, and Persons Living with Disabilities (PLWDs) through economic and sports initiatives."
               },
               {
                 icon: <CheckCircle className="h-8 w-8" />,
-                title: "Transparent Governance",
-                description: "Ensuring accountability, transparency, and community participation in decision-making processes."
-              },
-              {
-                icon: <Heart className="h-8 w-8" />,
-                title: "Environmental Protection",
-                description: "Promoting sustainable development and protecting our natural resources for future generations."
+                title: "Ensure Accountability",
+                description: "Champion transparent management of county resources and citizen participation in ward development planning."
               }
             ].map((item, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
@@ -97,8 +82,8 @@ export default function Home() {
             Ready to Make a Difference?
           </h2>
           <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
-            Your support can help us bring positive change to Ruaka and Ndenderu Ward. 
-            Every contribution, no matter how small, makes a difference.
+            Your support can help us bring positive change to Ndenderu Ward. 
+            Every contribution, no matter how small, makes a difference in securing accountable leadership.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -132,10 +117,10 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {[
-              { number: "500+", label: "Community Members Engaged" },
-              { number: "50+", label: "Projects Initiated" },
-              { number: "95%", label: "Satisfaction Rate" },
-              { number: "24/7", label: "Community Support" }
+              { number: "28,523", label: "Registered Voters" },
+              { number: "7", label: "Polling Centers" },
+              { number: "44", label: "Polling Stations" },
+              { number: "21", label: "Months Campaign Duration" }
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl md:text-5xl font-bold text-blue-600 mb-2">
