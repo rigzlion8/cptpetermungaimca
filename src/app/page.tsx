@@ -58,7 +58,7 @@ export default function Home() {
             {[
               '/WhatsApp Image 2025-11-26 at 4.29.09 PM.jpeg',
               '/WhatsApp Image 2025-11-26 at 4.29.09 PM (1).jpeg',
-              '/WhatsApp Image 2025-11-26 at 4.29.09 PM (2).jpeg',
+              '/HonPeterMungai.jpeg',
               '/WhatsApp Image 2025-11-26 at 4.29.09 PM (3).jpeg',
             ].map((image, index) => (
               <div key={index} className="relative aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
