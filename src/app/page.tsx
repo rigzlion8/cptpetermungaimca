@@ -58,10 +58,10 @@ export default function Home() {
             {[
               '/WhatsApp Image 2025-11-26 at 4.29.09 PM.jpeg',
               '/WhatsApp Image 2025-11-26 at 4.29.09 PM (1).jpeg',
-              '/HonPeterMungai.jpeg',
+              '/WhatsApp Image 2025-11-26 at 4.29.09 PM (2).jpeg',
               '/WhatsApp Image 2025-11-26 at 4.29.09 PM (3).jpeg',
             ].map((image, index) => (
-              <div key={index} className="relative aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+              <div key={index} className="relative aspect-[4/5] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                 <Image
                   src={image}
                   alt={`Campaign activity ${index + 1}`}
@@ -161,7 +161,7 @@ export default function Home() {
               '/WhatsApp Image 2025-11-26 at 4.29.18 PM (1).jpeg',
               '/WhatsApp Image 2025-11-26 at 4.29.19 PM.jpeg',
             ].map((image, index) => (
-              <div key={index} className="relative aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+              <div key={index} className="relative aspect-[4/5] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                 <Image
                   src={image}
                   alt={`Community engagement ${index + 1}`}
@@ -225,7 +225,7 @@ export default function Home() {
               '/WhatsApp Image 2025-11-26 at 4.29.20 PM (1).jpeg',
               '/WhatsApp Image 2025-11-26 at 4.29.21 PM.jpeg',
             ].map((image, index) => (
-              <div key={index} className="relative aspect-square rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+              <div key={index} className="relative aspect-[4/5] rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
                 <Image
                   src={image}
                   alt={`Campaign journey ${index + 1}`}
